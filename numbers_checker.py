@@ -9,6 +9,10 @@ class NumbersStep:
 
     def next(self) -> int:
         return self.m ** 2 + self.n ** 2 + 1
+    
+    def __eq__(self, value: object) -> bool:
+        return self.m == value.m and self.n == value.n or \
+               self.n == value.m and self.m == value.n
 
 
 @dataclass
